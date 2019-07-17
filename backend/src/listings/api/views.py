@@ -16,7 +16,7 @@ class ListingDetailView(RetrieveAPIView):
 def testRoute(req):
     """
     This is just an example of a pure http route handling function.
-    It can be accessed on the route /api/test as shown in urls.py
+    It can be accessed on the route /api/pure/test as shown in urls.py
     the function name does not matter as long as it is binded to a Path object
     and added to the urls List in urls.py. The path can be any valid url path specified
     by the Django framework and the smart people that make internet stuff.

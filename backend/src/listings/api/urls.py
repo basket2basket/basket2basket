@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import ListingListView, ListingDetailView
-from .views import *
+from .views import ListingListView, ListingDetailView,testRoute
+
 
 """
 In this list, all the possible routes are contained.They are created by making a path object that takes
@@ -13,5 +13,5 @@ the route is called. notice that Model.model inherited classes (e.g ListingListV
 urlpatterns = [
     path('', ListingListView.as_view()),
     path('<pk>', ListingDetailView.as_view()),
-    path('api/test',testRoute)
+    path('pure/test',testRoute)
 ]
