@@ -11,6 +11,7 @@ class ListingViewSet(viewsets.ModelViewSet):
     serializer_class = ListingSerializer
     queryset = Listing.objects.all()
 
+
     #
     # class ListingListView(ListAPIView):
     #     queryset = Listing.objects.all()
