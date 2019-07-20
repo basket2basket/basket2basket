@@ -5,4 +5,4 @@ from listings.models import Listing
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = ('title', 'content')
+        fields = ('id', 'title', 'content')
