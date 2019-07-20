@@ -12,6 +12,7 @@ class ListingViewSet(viewsets.ModelViewSet):
     queryset = Listing.objects.all()
 
 
+
     #
     # class ListingListView(ListAPIView):
     #     queryset = Listing.objects.all()
