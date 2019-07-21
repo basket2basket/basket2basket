@@ -1,2 +1,0 @@
-release: python manage.py migrate
-web: unicorn basket2basket.wsgi -- log-file -
