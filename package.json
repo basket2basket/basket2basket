@@ -35,5 +35,6 @@
   },
   "resolutions": {
     "fsevents": ""
-  }
+  },
+   "homepage" : "https://basket2basket.herokuapp.com/"
 }
