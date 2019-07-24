@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6183648-8a37-4730-b217-54e2f00295b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/basket2basket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket2basket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="e6183648-8a37-4730-b217-54e2f00295b0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/listings/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding>
                 <element signature="e#113#148#0" expanded="true" />
               </folding>
@@ -377,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/listings/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
             <element signature="e#113#148#0" expanded="true" />
           </folding>
