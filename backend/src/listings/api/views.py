@@ -13,7 +13,7 @@ class ListingViewSet(viewsets.ViewSet):
     queryset = Listing.objects.all()
 
     def list(self,request):
-        serializer = ListingSerializer(ListingViewSet.queryset, many=True)
+        serializer = ListingSerializer(Listing.objects.all(), many=True)
         return Response(serializer.data)
 
 
