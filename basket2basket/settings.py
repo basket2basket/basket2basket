@@ -25,7 +25,7 @@ SECRET_KEY = '7_3x%i1ob6o_-=!uzgop-9#=1w+j2%sp#x-kyuv&=4-e@xe+!7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['basket2basket.herokuapp.com']
+ALLOWED_HOSTS = ['basket2basket.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
