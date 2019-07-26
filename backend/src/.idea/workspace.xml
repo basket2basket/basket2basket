@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6183648-8a37-4730-b217-54e2f00295b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/basket2basket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/ListingView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/api/TransactionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/TransactionView.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/listings/api/ListingView.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="-219">
+              <caret line="1" selection-start-line="1" selection-end-line="7" />
               <folding>
                 <element signature="e#113#148#0" expanded="true" />
               </folding>
@@ -65,7 +62,14 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/listings/api/TransactionView.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -245,11 +249,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.30906594" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.30906594" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -369,16 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listings/api/ListingView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#113#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basket2basket/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -402,16 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listings/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/listings/api/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -422,8 +406,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/listings/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listings/api/ListingView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret line="1" selection-start-line="1" selection-end-line="7" />
+          <folding>
+            <element signature="e#113#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/listings/api/TransactionView.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

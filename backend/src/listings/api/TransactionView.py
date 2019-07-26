@@ -3,9 +3,10 @@ from rest_framework.decorators import *
 from listings.models import Transaction
 from rest_framework.response import Response
 from .serializers import TransactionSerializer
+from rest_framework import mixins
 
 
-class TransactionViewSet(viewsets.ModelViewSet):
+class TransactionViewSet(viewsets.ViewSet, mixins.ListModelMixin, mixins.DestroyModelMixin):
 
     serializer = TransactionSerializer
     queryset = Transaction.objects.all()
@@ -17,3 +18,4 @@ class TransactionViewSet(viewsets.ModelViewSet):
     @action(detail=False,methods=['put'])
     def accept_bid(self, request):
         pass
+

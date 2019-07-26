@@ -22,3 +22,6 @@ class Transaction(models.Model):
     offers = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name='offers')
     status = models.BooleanField(null=False)
     winning_bid = models.OneToOneField(Listing, on_delete=models.CASCADE, related_name='winning_bid')
+
+    def __str__(self):
+        return self.title
