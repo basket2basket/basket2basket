@@ -38,24 +38,3 @@ class ListingViewSet(viewsets.ViewSet):
 
 
 
-    # class ListingListView(ListAPIView):
-    #     queryset = Listing.objects.all()
-    #     serializer_class = ListingSerializer
-    #
-    #
-    # class ListingDetailView(RetrieveAPIView):
-    #     queryset = Listing.objects.all()
-    #     serializer_class = ListingSerializer
-    #
-    #
-    # class ListingCreateView(CreateAPIView):
-    #     queryset = Listing.objects.all()
-    #     serializer_class = ListingSerializer
-    #
-    # class ListingDestroy(DestroyAPIView):
-    #     queryset = Listing.objects.all()
-    #     serializer_class = ListingSerializer
-    #
-    # class ListingUpdate(UpdateAPIView):
-    #     queryset = Listing.objects.all()
-    #     serializer_class = ListingSerializer

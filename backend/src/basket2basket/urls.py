@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path, include
-import listings.api.views
+import listings.api.ListingView
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
