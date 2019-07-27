@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
 
     'listings',
 ]
@@ -82,8 +83,12 @@ WSGI_APPLICATION = 'basket2basket.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'basket2basket',
+        'USER': 'minzahan',
+        'PASSWORD': 'Shend',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -132,6 +137,7 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        #'rest_framework.permissions.AllowAny'
     ]
 }
 
