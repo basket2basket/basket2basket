@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path=dotenv_path)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -85,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'basket2basket',
-        'USER': 'minzahan',
-        'PASSWORD': 'Shend',
+        'USER': str(os.environ['DB_USER']),
+        'PASSWORD': str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -136,8 +140,8 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-        #'rest_framework.permissions.AllowAny'
+        #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
     ]
 }
 
