@@ -13,6 +13,7 @@ class ListingDetail extends React.Component {
         const listingID = this.props.match.params.listingID;
         axios.get(`https://basket2basket.herokuapp.com/api/${listingID}`)
             .then(res => {
+                console.log(res);
                 this.setState({
                     listing: res.data
                 })
