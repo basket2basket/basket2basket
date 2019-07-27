@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path='/Users/home/Desktop/comp312/basket2basket/backend/src/basket2basket')
-print(os.environ['GOOGLE_API_KEY'])
+load_dotenv(dotenv_path='/Users/home/Desktop/comp312/basket2basket/backend/src/basket2basket/.env')
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

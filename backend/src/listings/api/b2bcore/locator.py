@@ -3,7 +3,8 @@ import geocoder
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path='/Users/home/Desktop/comp312/basket2basket/backend/src/basket2basket')
+x = load_dotenv(dotenv_path='/Users/home/Desktop/comp312/basket2basket/backend/src/basket2basket\.env')
+print(x)
 googlekey = os.environ['GOOGLE_API_KEY']
 
 
