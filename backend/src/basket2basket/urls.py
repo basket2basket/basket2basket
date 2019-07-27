@@ -3,9 +3,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework.authtoken.views import obtain_auth_token
-import listings.api.views
-import listings.api.ListingView
-
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
