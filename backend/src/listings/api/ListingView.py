@@ -3,6 +3,7 @@ from rest_framework import viewsets
 from rest_framework.decorators import *
 from listings.models import Listing
 from rest_framework.response import Response
+from rest_framework.authentication import TokenAuthentication
 from .serializers import ListingSerializer
 from .b2bcore import locator
 
@@ -12,6 +13,7 @@ class ListingViewSet(viewsets.ViewSet):
 
     serializer_class = ListingSerializer
     queryset = Listing.objects.all()
+    authorization_classes = (TokenAuthentication, )
 
     def list(self,request):
         serializer = ListingSerializer(Listing.objects.all(), many=True)
