@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6183648-8a37-4730-b217-54e2f00295b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket2basket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listings/api/ListingView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/ListingView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listings/api/b2bcore/locator.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/b2bcore/locator.py" afterDir="false" />
     </list>
@@ -15,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/listings/api/ListingView.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+            <state relative-caret-position="-54">
+              <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
               <folding>
                 <element signature="e#113#148#0" expanded="true" />
               </folding>
@@ -68,11 +66,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/listings/api/b2bcore/locator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+            <state relative-caret-position="67">
+              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
               <folding>
                 <element signature="e#1#16#0" expanded="true" />
               </folding>
@@ -148,8 +146,8 @@
         <option value="$PROJECT_DIR$/basket2basket/__init__.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/basket2basket/settings.py" />
-        <option value="$PROJECT_DIR$/listings/api/b2bcore/locator.py" />
         <option value="$PROJECT_DIR$/listings/api/ListingView.py" />
+        <option value="$PROJECT_DIR$/listings/api/b2bcore/locator.py" />
       </list>
     </option>
   </component>
@@ -269,14 +267,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.30906594" />
+      <window_info anchor="bottom" id="Terminal" weight="0.30906594" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32991204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -389,16 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listings/api/TransactionView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basket2basket/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -452,22 +440,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listings/api/b2bcore/locator.py">
+    <entry file="file://$PROJECT_DIR$/listings/api/TransactionView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="29" column="81" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+        <state relative-caret-position="120">
+          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
           <folding>
-            <element signature="e#1#16#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listings/api/ListingView.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
+        <state relative-caret-position="-54">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
           <folding>
             <element signature="e#113#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listings/api/b2bcore/locator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding>
+            <element signature="e#1#16#0" expanded="true" />
           </folding>
         </state>
       </provider>

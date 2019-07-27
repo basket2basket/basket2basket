@@ -15,16 +15,14 @@ class ListingViewSet(viewsets.ViewSet):
 
     def list(self,request):
         serializer = ListingSerializer(Listing.objects.all(), many=True)
-        #print(locator.is_valid_and_in_range('1039 W Granville Ave, Chicago, IL 60660'))
         return Response(serializer.data)
-
 
     def create(self, request):
         data = ListingSerializer(data=request.data)
         if data.is_valid():
             location = data.validated_data['address']
             check =locator.is_valid_and_in_range(str(location), is_in_test=True)  # set to false for production results
-            if check[0] == True:
+            if check[0]:
                 data.save()
             else:
                 return Response({'ERROR': check[1]}, status=406)
@@ -33,7 +31,6 @@ class ListingViewSet(viewsets.ViewSet):
     @action(detail=False, methods=['put'])
     def updatestatus(self, request):
         pass
-
 
     @action(detail=False, methods=['post'])
     def listOne(self, request):
