@@ -1,10 +1,10 @@
-from django.contrib.gis.geoip2 import GeoIP2
+
 import geocoder
 import os
 from dotenv import load_dotenv
 
-x = load_dotenv(dotenv_path='/Users/home/Desktop/comp312/basket2basket/backend/src/basket2basket\.env')
-print(x)
+
+
 googlekey = os.environ['GOOGLE_API_KEY']
 
 
@@ -22,46 +22,50 @@ _errors = {
     3: 'unknown processing error',
 }
 
-def is_valid_and_in_range(location):
-    '''
+def is_valid_and_in_range(location, is_in_test=False):
+
+    """
     takes the address param from a Listing object and returns tuple
     that contains a success boolean and an error string ( null if no errors)
     :param location: address String
+    :param is_in_test: default False, will simulate successful validation if True
     :return: tuple <Boolean, String>
-    '''
-    zcode = _get_location(location)
+    """
+
+    if is_in_test:
+        return (True, None)
+    zcode = _get_location_type(location)
     if zcode in _zipcodes:
         return (True, None)
     elif zcode not in _zipcodes:
         return (False, _errors[1])
 
 
-def _get_location(loc):
-    string = str(loc).split(',')
-    if len(string) == 2:
+def _get_location_type(loc):
+    location_list = str(loc).split(',')
+    if len(location_list) == 2:
         try:
-            float(string[0])
-            float(string[1])
+            float(location_list[0])
+            float(location_list[1])
         except Exception as e:
-            return _onAddress(loc)
+            return _on_address(loc)
         else:
-            return _onCoordinates(string[0],string[1])
+            return _on_coordinates(location_list[0], location_list[1])
     else:
-        return _onAddress(loc)
+        return _on_address(loc)
 
 
-def _onCoordinates(x,y):
+def _on_coordinates(x, y):
     coords = geocoder.google([x,y], method='reverse', key=str(googlekey))
-    if coords:
-        return coords.postal
+    if coords.postal:
+        return int(coords.postal)
     else:
         return _errors[2]
 
 
-
-def _onAddress(loc):
+def _on_address(loc):
     coords = geocoder.google(loc, key=str(googlekey))
-    if coords:
-        return coords.postal
+    if coords.postal:
+        return int(coords.postal)
     else:
         return _errors[2]
