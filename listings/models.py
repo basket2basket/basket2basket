@@ -6,8 +6,12 @@ from django.db import models
 
 
 class Listing(models.Model):
+
     title = models.CharField(max_length=120)
-    content = models.TextField()
+    description = models.TextField()
+    price = models.DecimalField(decimal_places=2, max_digits=100, blank=False, default=0.0)
+    address = models.CharField(max_length=50, null=True)
+    status = models.CharField(max_length=10, default='unknown')
     categoryChoices = (
         ('Produce', 'Produce'),
         ('Cat Products', 'Cat Products'),
@@ -16,6 +20,17 @@ class Listing(models.Model):
     )
 
     category = models.CharField(max_length=100, choices=categoryChoices, default='Miscellaneous')
+
+    def __str__(self):
+        return self.title
+
+
+class Transaction(models.Model):
+
+    listing = models.OneToOneField(Listing, on_delete=models.CASCADE, primary_key=True)
+    offers = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name='offers')
+    status = models.BooleanField(null=False)
+    winning_bid = models.OneToOneField(Listing, on_delete=models.CASCADE, related_name='winning_bid')
 
     def __str__(self):
         return self.title
