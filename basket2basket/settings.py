@@ -97,8 +97,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'basket2basket',
-        'USER': 'minzahan',#str(os.environ['DB_USER']),
-        'PASSWORD': 'Shend', #str(os.environ['DB_PASSWORD']),
+        'USER': 'nathanhishon',#str(os.environ['DB_USER']),
+        'PASSWORD': '', #str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -156,7 +156,7 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny'
         #'rest_framework.permissions.AllowAny'
     ]
 }
@@ -165,4 +165,3 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CSRF_COOKIE_DOMAIN = None
 
-CORS_ORIGIN_ALLOW_ALL = True
