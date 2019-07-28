@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'
+import CustomForm from '../components/Form';
 
 import {Card} from "antd";
 
@@ -22,9 +23,11 @@ class ListingDetail extends React.Component {
 
     render() {
         return (
-            <Card title={this.state.listing.title}>
-                <p>{this.state.listing.content}</p>
-            </Card>
+            <div>
+                <Card title={this.state.listing.title}>
+                    <p>{this.state.listing.content}</p>
+                </Card>
+            </div>
         )
     }
 }

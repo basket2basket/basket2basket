@@ -25,16 +25,17 @@ class ListingDetailView(RetrieveAPIView):
 class ListingCreateView(CreateAPIView):
     queryset = Listing.objects.all()
     serializer_class = ListingSerializer
-    permission_classes = (permissions.IsAuthenticated, )
+    permission_classes = (permissions.AllowAny, )
 
 
 class ListingUpdateView(UpdateAPIView):
     queryset = Listing.objects.all()
     serializer_class = ListingSerializer
-    permission_classes = (permissions.IsAuthenticated, )
+    permission_classes = (permissions.AllowAny, )
+
 
 
 class ListingDeleteView(DestroyAPIView):
     queryset = Listing.objects.all()
     serializer_class = ListingSerializer
-    permission_classes = (permissions.IsAuthenticated, )
+    permission_classes = (permissions.AllowAny, )

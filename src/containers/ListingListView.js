@@ -1,7 +1,7 @@
 import React from 'react';
 import Listing from '../components/Listing'
 import axios from 'axios'
-import CustomForm from '../components/Form';
+
 
 
 class ListingList extends React.Component {
@@ -23,9 +23,6 @@ class ListingList extends React.Component {
         return (
             <div>
                 <Listing data={this.state.listings}/>
-                <br/>
-                <h2>Create a listing</h2>
-                <CustomForm/>
             </div>
         )
     }

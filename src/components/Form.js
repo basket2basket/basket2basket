@@ -1,33 +1,64 @@
 import React from 'react';
-import {Form, Input, Button} from 'antd';
+import axios from 'axios';
 
 class CustomForm extends React.Component {
 
     //handle submit?
 
-    handleFormSubmit = (event) => {
+    handleFormSubmit = (event, requestType, listingID) => {
         event.preventDefault();
         const title = event.target.elements.title.value;
         const content = event.target.elements.content.value;
 
-        console.log(title, content)
+        switch (requestType) {
+            case 'post':
+                axios.post('https://basket2basket.herokuapp.com/api/create/', {
+                    title: title,
+                    content: content
+                })
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(err => {
+                    console.log(err)
+                });
+
+            case 'put':
+                axios.put(`http://127.0.0.1:8000/api/create/${listingID}/`, {
+                    title: title,
+                    content: content
+                })
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(err => {
+                    console.log(err)
+                });
+        }
     }
 
     render() {
 
         return (
             <div>
-                <Form onSubmit={this.handleFormSubmit}>
-                    <Form.Item label="Title">
-                        <Input name="title" placeholder="Enter Listing Title"/>
-                    </Form.Item>
-                    <Form.Item label="Content">
-                        <Input name="content" placeholder="Enter Listing Content"/>
-                    </Form.Item>
-                    <Form.Item>
-                        <Button type="primary" htmlType="submit">Submit</Button>
-                    </Form.Item>
-                </Form>
+                <form onSubmit={(event) => this.handleFormSubmit(event, this.props.requestType, this.props.listingID)}>
+                    <div className="field">
+                        <label className="label">Title</label>
+                        <div className="control">
+                            <input name="title" className="input" type="text" placeholder="Listing Name"/>
+                        </div>
+                    </div>
+                    <div className="field">
+                        <label className="label">Content</label>
+                        <div className="control">
+                            <input name="content" className="input" type="text" placeholder="Listing Name"/>
+                        </div>
+                    </div>
+
+                    <div className="control">
+                        <button className="button is-primary" type="primary" htmlType="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         );
     }
