@@ -12,7 +12,7 @@ class CustomForm extends React.Component {
 
         switch (requestType) {
             case 'post':
-                axios.post('https://basket2basket.herokuapp.com/create/', {
+                axios.post('https://basket2basket.herokuapp.com/listings/create/', {
                     title: title,
                     content: content
                 })
