@@ -8,16 +8,25 @@ class CustomForm extends React.Component {
     handleFormSubmit = (event, requestType, listingID) => {
         event.preventDefault();
         const title = event.target.elements.title.value;
-        const content = event.target.elements.content.value;
+        const description = event.target.elements.description.value;
+        const price = event.target.elements.price.value;
+        const category = event.target.elements.category.value;
+        const status = event.target.elements.status.value;
+        const address = event.target.elements.address.value;
 
         switch (requestType) {
             case 'post':
                 axios.post('http://127.0.0.1:8000/listings/create/', {
                     title: title,
-                    content: content
+                    description: description,
+                    price: price,
+                    category: category,
+                    status: status,
+                    address: address
                 })
                 .then(res => {
                     console.log(res)
+                    this.props.history.push('/');
                 })
                 .catch(err => {
                     console.log(err)
@@ -26,7 +35,11 @@ class CustomForm extends React.Component {
             case 'put':
                 axios.put(`http://127.0.0.1:8000/listings/create/${listingID}/`, {
                     title: title,
-                    content: content
+                    description: description,
+                    price: price,
+                    category: category,
+                    status: status,
+                    address: address
                 })
                 .then(res => {
                     console.log(res)
@@ -40,25 +53,60 @@ class CustomForm extends React.Component {
     render() {
 
         return (
-            <div>
-                <form onSubmit={(event) => this.handleFormSubmit(event, this.props.requestType, this.props.listingID)}>
-                    <div className="field">
-                        <label className="label">Title</label>
-                        <div className="control">
-                            <input name="title" className="input" type="text" placeholder="Listing Name"/>
-                        </div>
+            <div className="columns is-centered">
+                <div className="column is-half">
+                    <div className="form-title">
+                        <h2>Create a new listing</h2>
                     </div>
-                    <div className="field">
-                        <label className="label">Content</label>
-                        <div className="control">
-                            <input name="content" className="input" type="text" placeholder="Listing Name"/>
+                    <form onSubmit={(event) => this.handleFormSubmit(event, this.props.requestType, this.props.listingID)}>
+                        <div className="field">
+                            <label className="label">Title</label>
+                            <div className="control">
+                                <input name="title" className="input" type="text" placeholder="Listing Name"/>
+                            </div>
                         </div>
-                    </div>
+                        <div className="field">
+                            <label className="label">Description</label>
+                            <div className="control">
+                                <input name="description" className="input" type="textarea" rows="5" placeholder="Listing Name"/>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Category</label>
+                            <div className="control">
+                                <div className="select is-primary">
+                                    <select name="category" id="category">
+                                        <option value="fruits">Fruits</option>
+                                        <option value="vegetables">Vegetables</option>
+                                        <option value="dairy">Dairy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Price</label>
+                            <div className="control">
+                                <input type="number" name ="price" className="input is-primary" placeholder="0" step="any"/>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Address</label>
+                            <div className="control">
+                                <input name="address" className="input" type="text" placeholder="Listing Address"/>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <label className="label">Status</label>
+                            <div className="control">
+                                <input name="status" className="input" type="text" placeholder="Listing available"/>
+                            </div>
+                        </div>
 
-                    <div className="control">
-                        <button className="button is-primary" type="primary" htmlType="submit">Submit</button>
-                    </div>
-                </form>
+                        <div className="control">
+                            <button className="button is-primary" type="primary" htmlType="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }
