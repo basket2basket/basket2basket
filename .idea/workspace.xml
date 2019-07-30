@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b46c35-494d-4ae5-a1bf-10264bd19035" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/basket2basket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/basket2basket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket2basket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket2basket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listings/api/TransactionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/TransactionView.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,7 +107,7 @@
       <workItem from="1563120332472" duration="9443000" />
       <workItem from="1564276419928" duration="13536000" />
       <workItem from="1564506242512" duration="541000" />
-      <workItem from="1564506819224" duration="2038000" />
+      <workItem from="1564506819224" duration="2340000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,7 @@ class TransactionViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.
         if data.is_valid():
             intersect = set(transaction.offers).intersection(set(data.validated_data['offers']))
             if len(intersect) > 0:
-                transaction.offers = data.validated_data['offers']
+                transaction.offers = list(set(data.validated_data['offers']))
                 transaction.save()
                 return Response({'OK': 'bid made'}, status=200)
             else:
@@ -33,7 +33,7 @@ class TransactionViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.
             transaction.winning_bid = serial.validated_data['winning_bid']
             transaction.status = False
             transaction.save()
-            return Response({'OK': 'bid made'}, status=200)
+            return Response({'OK': 'bid accepted'}, status=200)
         return Response(data={'ERROR','Something went wrong'},status=404)
 
 
