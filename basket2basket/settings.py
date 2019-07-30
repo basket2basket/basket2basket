@@ -20,7 +20,6 @@ load_dotenv(dotenv_path=dotenv_path)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -31,7 +30,6 @@ SECRET_KEY = '7_3x%i1ob6o_-=!uzgop-9#=1w+j2%sp#x-kyuv&=4-e@xe+!7'
 DEBUG = True
 
 ALLOWED_HOSTS = ['basket2basket.herokuapp.com', '127.0.0.1']
-
 
 # Application definition
 
@@ -45,6 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_auth',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     'corsheaders',
     'listings',
@@ -88,7 +91,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'basket2basket.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -97,13 +99,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'basket2basket',
-        'USER': 'nathanhishon',#str(os.environ['DB_USER']),
-        'PASSWORD': '', #str(os.environ['DB_PASSWORD']),
+        'USER': 'nathanhishon',  # str(os.environ['DB_USER']),
+        'PASSWORD': '',  # str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -123,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -136,7 +136,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -151,13 +150,12 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SITE_ID = 1
 
-
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
-        #'rest_framework.permissions.AllowAny'
+        # 'rest_framework.permissions.AllowAny'
     ]
 }
 
@@ -165,3 +163,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CSRF_COOKIE_DOMAIN = None
 
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_VERIFICATION = 'none'

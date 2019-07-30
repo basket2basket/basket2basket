@@ -1,6 +1,8 @@
 import React from 'react';
-// import {Layout, Menu, Breadcrumb} from 'antd';
-import {Link} from 'react-router-dom';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../store/actions/auth';
 import Header from './Header';
 
 // const {Header, Content, Footer} = Layout;
@@ -8,7 +10,7 @@ import Header from './Header';
 const CustomLayout = (props) => {
     return (
         <div>
-            <Header/>
+            <Header {...props} />
 
             <div style={{background: '#fff', padding: 24, minHeight: 280}}>
                 {props.children}
@@ -19,5 +21,11 @@ const CustomLayout = (props) => {
     )
 }
 
-export default CustomLayout;
+const mapDispatchToProps = dispatch => {
+    return {
+        logout: () => dispatch(actions.logout())
+    }
+}
+
+export default withRouter(connect(null, mapDispatchToProps)(CustomLayout));
 

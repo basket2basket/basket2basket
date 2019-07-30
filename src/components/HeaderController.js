@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class HeaderController extends Component {
     render() {
@@ -9,14 +10,32 @@ class HeaderController extends Component {
                         Nate Hishon
                     </div>
                     <div className="navbar-dropdown">
-                        <a className="navbar-item">
-                            <div>
-                                <span className="icon is-small">
-                                    <i className="fa fa-user-circle-o"></i>
-                                </span>
-                            Profile
-                            </div>
-                        </a>
+
+                        {
+                            this.props.isAuthenticated ?
+
+                                <Link onClick={this.props.logout} className="navbar-item">
+                                    <div>
+                                         <span className="icon is-small">
+                                    <i className="fa fa-bug"></i>
+                                 </span>
+                                        Logout
+                                    </div>
+                                </Link>
+
+                                :
+
+                                <Link to="/login" className="navbar-item">
+                                    <div>
+                                         <span className="icon is-small">
+                                    <i className="fa fa-bug"></i>
+                                 </span>
+                                        Login
+                                    </div>
+                                </Link>
+
+                        }
+
                         <a className="navbar-item">
                             <div>
                                  <span className="icon is-small">
@@ -25,14 +44,8 @@ class HeaderController extends Component {
                                 Report bug
                             </div>
                         </a>
-                        <a className="navbar-item">
-                            <div>
- <span className="icon is-small">
- <i className="fa fa-sign-out"></i>
- </span>
-                                Sign Out
-                            </div>
-                        </a>
+
+
                     </div>
                 </div>
             </div>
