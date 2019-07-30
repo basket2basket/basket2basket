@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-import os, dj_database_url
+import os #, dj_database_url
 
 from dotenv import load_dotenv
 
@@ -97,8 +97,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'basket2basket',
-        'USER': 'nathanhishon',#str(os.environ['DB_USER']),
-        'PASSWORD': '', #str(os.environ['DB_PASSWORD']),
+        'USER': str(os.environ['DB_USER']),
+        'PASSWORD': str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }

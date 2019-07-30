@@ -10,7 +10,7 @@ urlpatterns = [
     # path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('listings/', include('listings.api.urls')),
     path('admin/', admin.site.urls),
-    re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
+    #re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
 ]
 
 
