@@ -20,7 +20,7 @@ class Header extends Component {
                             </a>
                         </div>
 
-                    <HeaderController />
+                    <HeaderController {...this.props} />
                     </div>
                 </nav>
             </header>
