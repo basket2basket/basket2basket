@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { connect } from "react-redux";
 
 class CustomForm extends React.Component {
 
@@ -23,7 +24,7 @@ class CustomForm extends React.Component {
 
         switch (requestType) {
             case 'post':
-                axios.post('https://basket2basket.herokuapp.com/listings/create/', {
+                axios.post('http://127.0.0.1:8000/listings/create/', {
                     title: title,
                     description: description,
                     price: price,
@@ -39,21 +40,21 @@ class CustomForm extends React.Component {
                         console.log(err)
                     });
 
-            case 'put':
-                axios.put(`https://basket2basket.herokuapp.com/listings/create/${listingID}/`, {
-                    title: title,
-                    description: description,
-                    price: price,
-                    category: category,
-                    status: status,
-                    address: address
-                })
-                    .then(res => {
-                        console.log(res)
-                    })
-                    .catch(err => {
-                        console.log(err)
-                    });
+            // case 'put':
+            //     axios.put(`http://127.0.0.1:8000/listings/create/${listingID}/`, {
+            //         title: title,
+            //         description: description,
+            //         price: price,
+            //         category: category,
+            //         status: status,
+            //         address: address
+            //     })
+            //         .then(res => {
+            //             console.log(res)
+            //         })
+            //         .catch(err => {
+            //             console.log(err)
+            //         });
         }
     }
 
@@ -122,5 +123,11 @@ class CustomForm extends React.Component {
     }
 }
 
-export default CustomForm;
+const mapStateToProps = state => {
+  return {
+    token: state.token
+  };
+};
+
+export default connect(mapStateToProps)(CustomForm);
 
