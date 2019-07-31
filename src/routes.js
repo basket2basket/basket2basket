@@ -10,7 +10,7 @@ const BaseRouter = () => (
     <div>
         <Route exact path='/' component={ListingList} />
         <Route exact path='/create' render={(props) => <CustomForm {...props} requestType="post" listingID={null} />}/>
-        <Route exact path='/listings/:listingID/' component={ListingDetailView} />
+        <Route exact path='/listings-show/:listingID/' component={ListingDetailView} />
         <Route exact path='/login/' component={Login} />
         <Route exact path='/signup/' component={Signup} />
     </div>
