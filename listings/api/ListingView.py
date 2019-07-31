@@ -26,6 +26,7 @@ class ListingViewSet(viewsets.ViewSet):
             check =locator.is_valid_and_in_range(str(location), is_in_test=True)  # set to false for production results
             if check[0]:
                 data.save()
+                return Response({'OK','Listing saved'},status=200)
             else:
                 return Response({'ERROR': check[1]}, status=406)
         return Response({'ERROR': 'Something went wrong :('},status=400)

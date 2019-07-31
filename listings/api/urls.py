@@ -8,10 +8,18 @@ from .views import (
     ListingDeleteView
 )
 
-urlpatterns = [
-    path('', ListingListView.as_view()),
-    path('create/', ListingCreateView.as_view()),
-    path('<pk>', ListingDetailView.as_view()),
-    path('<pk>/update/', ListingUpdateView.as_view()),
-    path('<pk>/delete/', ListingDeleteView.as_view())
-]
+from .ListingView import ListingViewSet
+from .TransactionView import TransactionViewSet
+from .B2BUserView import UserListView
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'listings', ListingViewSet, )
+router.register(r'transactions',TransactionViewSet,)
+router.register(r'users',UserListView,)
+urlpatterns = router.urls
+
+#urlpatterns = [
+ #   path('listing/', ListingViewSet.as_view({'get','list'})),
+    #path('/transaction', TransactionViewSet.as_view())
+#]

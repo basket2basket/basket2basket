@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b46c35-494d-4ae5-a1bf-10264bd19035" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/listings/api/B2BUserView.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listings/api/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket2basket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basket2basket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/api/ListingView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/ListingView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listings/api/TransactionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/TransactionView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/migrations/0002_auto_20190720_1438.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/migrations/0002_listing_category.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/migrations/0003_transaction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/migrations/0004_merge_20190728_1251.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/migrations/0005_auto_20190728_1811.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,39 +40,12 @@
     <expand />
     <select />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>.idea</find>
-      <find>webpa</find>
-      <find>templates_d</find>
-      <find>staticfiles</find>
-      <find>middleware_classes</find>
-      <find>staticfilesS</find>
-      <find>basket2basket fr</find>
-      <find>127.0.0.1</find>
-      <find>listings_l</find>
-      <find>restframework</find>
-      <find>middlew</find>
-      <find>staticfiles_</find>
-      <find>listings</find>
-      <find>databases =</find>
-      <find>databases = {</find>
-      <find>whitenoi</find>
-      <find>build</find>
-      <find>staticfiles_d</find>
-      <find>rest_auth</find>
-      <find>art</find>
-      <find>ant-card</find>
-      <find>create a listing</find>
-      <find>sites</find>
-      <find>update</find>
-      <find>card</find>
-      <find>auth</find>
-      <find>permi</find>
-      <find>CsrfViewMiddleware</find>
-      <find>datab</find>
-      <find>permission</find>
-    </findStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,6 +67,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -107,7 +99,7 @@
       <workItem from="1563120332472" duration="9443000" />
       <workItem from="1564276419928" duration="13536000" />
       <workItem from="1564506242512" duration="541000" />
-      <workItem from="1564506819224" duration="2340000" />
+      <workItem from="1564506819224" duration="11087000" />
     </task>
     <servers />
   </component>
@@ -136,5 +128,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/listings/api/ListingView.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

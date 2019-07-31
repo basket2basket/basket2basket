@@ -8,7 +8,7 @@ from rest_framework import mixins
 
 class TransactionViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.DestroyModelMixin):
 
-    serializer = TransactionSerializer
+    serializer_class = TransactionSerializer
     queryset = Transaction.objects.all()
 
     @action(detail=False,methods=['put'])
