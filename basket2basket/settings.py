@@ -95,15 +95,15 @@ WSGI_APPLICATION = 'basket2basket.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'basket2basket',
-    #     'USER': 'nathanhishon',  # str(os.environ['DB_USER']),
-    #     'PASSWORD': '',  # str(os.environ['DB_PASSWORD']),
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
+    # 'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'basket2basket',
+        'USER': 'nathanhishon',  # str(os.environ['DB_USER']),
+        'PASSWORD': '',  # str(os.environ['DB_PASSWORD']),
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 # Password validation
