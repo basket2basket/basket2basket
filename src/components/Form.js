@@ -14,6 +14,13 @@ class CustomForm extends React.Component {
         const status = event.target.elements.status.value;
         const address = event.target.elements.address.value;
 
+        axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+        axios.defaults.xsrfCookieName = "csrftoken";
+        axios.defaults.headers = {
+            "Content-Type": "application/json",
+            Authorization: `Token ${this.props.token}`,
+        };
+
         switch (requestType) {
             case 'post':
                 axios.post('http://127.0.0.1:8000/listings/create/', {
@@ -24,13 +31,13 @@ class CustomForm extends React.Component {
                     status: status,
                     address: address
                 })
-                .then(res => {
-                    console.log(res)
-                    this.props.history.push('/');
-                })
-                .catch(err => {
-                    console.log(err)
-                });
+                    .then(res => {
+                        console.log(res)
+                        this.props.history.push('/');
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    });
 
             case 'put':
                 axios.put(`http://127.0.0.1:8000/listings/create/${listingID}/`, {
@@ -41,12 +48,12 @@ class CustomForm extends React.Component {
                     status: status,
                     address: address
                 })
-                .then(res => {
-                    console.log(res)
-                })
-                .catch(err => {
-                    console.log(err)
-                });
+                    .then(res => {
+                        console.log(res)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    });
         }
     }
 
@@ -58,7 +65,8 @@ class CustomForm extends React.Component {
                     <div className="form-title">
                         <h2>Create a new listing</h2>
                     </div>
-                    <form onSubmit={(event) => this.handleFormSubmit(event, this.props.requestType, this.props.listingID)}>
+                    <form
+                        onSubmit={(event) => this.handleFormSubmit(event, this.props.requestType, this.props.listingID)}>
                         <div className="field">
                             <label className="label">Title</label>
                             <div className="control">
@@ -68,7 +76,8 @@ class CustomForm extends React.Component {
                         <div className="field">
                             <label className="label">Description</label>
                             <div className="control">
-                                <input name="description" className="input" type="textarea" rows="5" placeholder="Listing Name"/>
+                                <input name="description" className="input" type="textarea" rows="5"
+                                       placeholder="Listing Name"/>
                             </div>
                         </div>
                         <div className="field">
@@ -86,7 +95,8 @@ class CustomForm extends React.Component {
                         <div className="field">
                             <label className="label">Price</label>
                             <div className="control">
-                                <input type="number" name ="price" className="input is-primary" placeholder="0" step="any"/>
+                                <input type="number" name="price" className="input is-primary" placeholder="0"
+                                       step="any"/>
                             </div>
                         </div>
                         <div className="field">
