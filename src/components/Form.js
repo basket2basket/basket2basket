@@ -23,7 +23,7 @@ class CustomForm extends React.Component {
 
         switch (requestType) {
             case 'post':
-                axios.post('http://127.0.0.1:8000/listings/create/', {
+                axios.post('https://basket2basket.herokuapp.com/listings/create/', {
                     title: title,
                     description: description,
                     price: price,
@@ -40,7 +40,7 @@ class CustomForm extends React.Component {
                     });
 
             case 'put':
-                axios.put(`http://127.0.0.1:8000/listings/create/${listingID}/`, {
+                axios.put(`https://basket2basket.herokuapp.com/listings/create/${listingID}/`, {
                     title: title,
                     description: description,
                     price: price,

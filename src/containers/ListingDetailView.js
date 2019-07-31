@@ -12,7 +12,7 @@ class ListingDetail extends React.Component {
 
     componentDidMount() {
         const listingID = this.props.match.params.listingID;
-        axios.get(`http://127.0.0.1:8000/listings/${listingID}`)
+        axios.get(`https://basket2basket.herokuapp.com/listings/${listingID}`)
             .then(res => {
                 console.log(res);
                 this.setState({

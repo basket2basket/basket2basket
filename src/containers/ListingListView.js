@@ -11,7 +11,7 @@ class ListingList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://127.0.0.1:8000/listings/')
+        axios.get('https://basket2basket.herokuapp.com/listings/')
             .then(res => {
                 this.setState({
                     listings: res.data
