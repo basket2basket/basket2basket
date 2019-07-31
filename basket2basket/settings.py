@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'listings',
     'corsheaders',
 ]
+
 AUTH_USER_MODEL = 'auth.user'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

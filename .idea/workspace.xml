@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b46c35-494d-4ae5-a1bf-10264bd19035" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/listings/api/B2BUserView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listings/api/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basket2basket/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basket2basket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basket2basket/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/ListingView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/ListingView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/TransactionView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/TransactionView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/migrations/0002_auto_20190720_1438.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/migrations/0002_listing_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/migrations/0003_transaction.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/migrations/0004_merge_20190728_1251.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/migrations/0005_auto_20190728_1811.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +83,7 @@
       <workItem from="1563120332472" duration="9443000" />
       <workItem from="1564276419928" duration="13536000" />
       <workItem from="1564506242512" duration="541000" />
-      <workItem from="1564506819224" duration="11087000" />
+      <workItem from="1564506819224" duration="11489000" />
     </task>
     <servers />
   </component>
