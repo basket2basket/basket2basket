@@ -30,3 +30,4 @@ psycopg2
 psycopg2-binary
 django-heroku
 python-dotenv
+geocoder==1.38.1

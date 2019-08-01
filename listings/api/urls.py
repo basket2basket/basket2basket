@@ -11,10 +11,10 @@ from .views import (
 from .ListingView import ListingViewSet
 from .TransactionView import TransactionViewSet
 from .B2BUserView import UserListView
-from rest_framework.routers import DefaultRouter
+from rest_framework.routers import DefaultRouter, SimpleRouter
 
 router = DefaultRouter()
-router.register(r'listings', ListingViewSet, )
+router.register(r'listings', ListingViewSet )
 router.register(r'transactions',TransactionViewSet,)
 router.register(r'users',UserListView,)
 urlpatterns = router.urls
