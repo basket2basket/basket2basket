@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.conf import settings
 
+from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.contrib.auth.models import User
+
+
 
 
 
@@ -18,6 +23,7 @@ class Listing(models.Model):
         ('Apparel', 'Apparel'),
         ('Miscellaneous', 'Miscellaneous'),
     )
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
 
     category = models.CharField(max_length=100, choices=categoryChoices, default='Miscellaneous')
 
@@ -34,3 +40,6 @@ class Transaction(models.Model):
 
     def __str__(self):
         return self.title
+
+
+

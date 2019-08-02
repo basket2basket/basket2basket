@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ['basket2basket.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'allauth',
+    'allauth.account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,14 +46,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
-
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
-    'corsheaders',
+    'rest_auth.registration',
     'listings',
+    'corsheaders',
 ]
+#
+AUTH_USER_MODEL = 'auth.user'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -99,8 +100,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'basket2basket',
-        'USER': 'nathanhishon',  # str(os.environ['DB_USER']),
-        'PASSWORD': '',  # str(os.environ['DB_PASSWORD']),
+        'USER': str(os.environ['DB_USER']),
+        'PASSWORD': str(os.environ['DB_PASSWORD']),
+        # 'USER': 'nathanhishon',  # str(os.environ['DB_USER']),
+        # 'PASSWORD': '',  # str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -164,9 +167,9 @@ CORS_ORIGIN_WHITELIST = (
     'basket2basket.herokuapp.com'
 )
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
-CSRF_COOKIE_DOMAIN = None
+CSRF_COOKIE_NAME = "csrftoken"
 
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
