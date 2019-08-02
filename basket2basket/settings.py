@@ -102,8 +102,6 @@ DATABASES = {
         'NAME': 'basket2basket',
         'USER': str(os.environ['DB_USER']),
         'PASSWORD': str(os.environ['DB_PASSWORD']),
-        # 'USER': 'nathanhishon',  # str(os.environ['DB_USER']),
-        # 'PASSWORD': '',  # str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }
