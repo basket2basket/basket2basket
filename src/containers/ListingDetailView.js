@@ -3,6 +3,7 @@ import axios from 'axios'
 import CustomForm from '../components/Form';
 
 import {Card} from "antd";
+import Button from "antd/es/button/button";
 
 class ListingDetail extends React.Component {
 
@@ -26,7 +27,13 @@ class ListingDetail extends React.Component {
         return (
             <div>
                 <Card title={this.state.listing.title}>
-                    <p>{this.state.listing.content}</p>
+                    <p><label htmlFor="description"><strong>Description: </strong></label>{this.state.listing.description}</p>
+                    <p><label htmlFor="price"><strong>Price: </strong></label>{this.state.listing.price}</p>
+                    <p><label htmlFor="status"><strong>Status: </strong></label>{this.state.listing.status}</p>
+                    <p><label htmlFor="category"><strong>Category: </strong></label>{this.state.listing.category}</p>
+                    <p><label htmlFor="address"><strong>Address: </strong></label>{this.state.listing.address}</p>
+                    <br/>
+                    <button className="button is-primary">Buy</button>
                 </Card>
             </div>
         )

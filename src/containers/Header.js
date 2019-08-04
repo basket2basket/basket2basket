@@ -15,6 +15,9 @@ class Header extends Component {
                             </div>
                         </div>
                         <div className="navbar-end">
+                            <a className="navbar-item" href="/">
+                                Listings
+                            </a>
                             <a className="navbar-item" href="/create">
                                 Create
                             </a>
