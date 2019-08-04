@@ -16,7 +16,7 @@ function Listings(props){
                     <div className="media-content">
                         <div className="content">
                             <p>
-                                <strong>{item.title}</strong>
+                                <a href={`/listings-show/${item.id}`}><strong>{item.title}</strong></a>
                                 <br/>
                                 <label htmlFor="description"><strong>Description: </strong></label><span>{item.description}</span>
                                 <br/>
