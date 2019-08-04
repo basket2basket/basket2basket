@@ -10,6 +10,7 @@ from .b2bcore import locator
 from django.shortcuts import get_object_or_404
 from django.core import serializers
 from rest_framework.mixins import ListModelMixin
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 
 class ListingViewSet(viewsets.GenericViewSet, ListModelMixin):
@@ -19,6 +20,7 @@ class ListingViewSet(viewsets.GenericViewSet, ListModelMixin):
     lookup_field = 'id'
     renderer_classes = [JSONRenderer]
     authorization_classes = (TokenAuthentication, )
+    permission_classes = (AllowAny, )
 
 
 
@@ -66,6 +68,4 @@ class ListingViewSet(viewsets.GenericViewSet, ListModelMixin):
     #     print(serializer.error_messages)
     #     return Response(serializer.validated_data)
     #     return Response({'ERROR': 'Something went wrong :('},status=400)
-
-
 

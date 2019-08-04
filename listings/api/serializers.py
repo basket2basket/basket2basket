@@ -2,13 +2,14 @@ from rest_framework import serializers
 
 from listings.models import Listing, Transaction
 from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
 
 
 
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = ('id' , 'title', 'description', 'price', 'status', 'address')
+        fields = ('id', 'title', 'description', 'price', 'status', 'address')
 
 
 class TransactionSerializer(serializers.ModelSerializer):
@@ -19,6 +20,12 @@ class TransactionSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    model = User
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'password')
+        extra_kwargs = {'password': {'write_only': True, 'required': True}}
 
-    fields = ('username')
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        Token.objects.create(user=user)
+        return user

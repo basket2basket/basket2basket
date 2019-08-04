@@ -4,12 +4,14 @@ from listings.models import Transaction
 from rest_framework.response import Response
 from .serializers import TransactionSerializer
 from rest_framework import mixins
+from rest_framework.permissions import IsAuthenticated
 
 
 class TransactionViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.DestroyModelMixin):
 
     serializer_class = TransactionSerializer
     queryset = Transaction.objects.all()
+    permission_classes(IsAuthenticated, )
 
     @action(detail=False,methods=['put'])
     def bid(self, request):

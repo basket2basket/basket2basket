@@ -100,8 +100,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'basket2basket',
-        'USER': str(os.environ['DB_USER']),
-        'PASSWORD': str(os.environ['DB_PASSWORD']),
+        'USER': 'minzahan',#str(os.environ['DB_USER']),
+        'PASSWORD': 'Shend',#str(os.environ['DB_PASSWORD']),
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -153,7 +153,7 @@ SITE_ID = 1
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
