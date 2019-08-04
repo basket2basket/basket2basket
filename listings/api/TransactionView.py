@@ -6,16 +6,34 @@ from .serializers import TransactionSerializer
 from rest_framework import mixins
 
 
-class TransactionViewSet(viewsets.ViewSet, mixins.ListModelMixin, mixins.DestroyModelMixin):
+class TransactionViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.DestroyModelMixin):
 
-    serializer = TransactionSerializer
+    serializer_class = TransactionSerializer
     queryset = Transaction.objects.all()
 
     @action(detail=False,methods=['put'])
     def bid(self, request):
-        pass
+        transaction = self.get_object()
+        data = TransactionSerializer(data=request.data)
+        if data.is_valid():
+            intersect = set(transaction.offers).intersection(set(data.validated_data['offers']))
+            if len(intersect) > 0:
+                transaction.offers = list(set(data.validated_data['offers']))
+                transaction.save()
+                return Response({'OK': 'bid made'}, status=200)
+            else:
+                return Response(data={'ERROR':'Item has already been offered as a bid for this listing'},status=406)
+        return Response(data={'ERROR','Something went wrong'},status=404)
 
     @action(detail=False,methods=['put'])
     def accept_bid(self, request):
-        pass
+        transaction = self.get_object()
+        serial = TransactionSerializer(data=request.data)
+        if serial.is_valid():
+            transaction.winning_bid = serial.validated_data['winning_bid']
+            transaction.status = False
+            transaction.save()
+            return Response({'OK': 'bid accepted'}, status=200)
+        return Response(data={'ERROR','Something went wrong'},status=404)
+
 
