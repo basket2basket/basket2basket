@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 
 
-googlekey = os.environ['GOOGLE_API_KEY']
+# googlekey = os.environ['GOOGLE_API_KEY']
 
 
 
