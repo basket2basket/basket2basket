@@ -87,9 +87,10 @@ class CustomForm extends React.Component {
                             <div className="control">
                                 <div className="select is-primary">
                                     <select name="category" id="category">
-                                        <option value="fruits">Fruits</option>
-                                        <option value="vegetables">Vegetables</option>
-                                        <option value="dairy">Dairy</option>
+                                        <option value="Produce">Produce</option>
+                                        <option value="Cat Products">Cat Products</option>
+                                        <option value="Apparel">Apparel</option>
+                                        <option value="Miscellaneous">Miscellaneous</option>
                                     </select>
                                 </div>
                             </div>
@@ -126,7 +127,7 @@ class CustomForm extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    token: state.token
+    token: state.authReducer.token
   };
 };
 

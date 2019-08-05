@@ -1,4 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
+
 .App {
   /*text-align: center;*/
 }
+
+
+.title-div{
+    margin: 30px 0;
+}
+
+.title-h1{
+    font-family: 'Beth Ellen', cursive;
+    text-align: center;
+    font-size: 32px;
+}
+
+.categories-container{
+    margin: 50px!important;
+    text-align: center;
+}
+
 
