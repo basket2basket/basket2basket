@@ -1,5 +1,4 @@
 # basket2basket
-# Purpose
 Basket2Basket is a web application that is built to serve the local community as a platform to buy, sell, and trade personal goods. It is meant to emulate the wholesome environment of a farmers market with the efficiency and ease of eCommerce. A user’s access to Basket2Basket is restricted to their own specific neighborhood so the transactional nature of the application is kept their own backyard! Locals have the opportunity to share their homegrown blueberries and fresh baked bread beyond nextdoor neighbors which allows strengthening of the community.
 # Installation
 Before running this application, you need to download and install [Node.js](https://nodejs.org/en/download/) and [Python3](https://www.python.org/downloads/). npm will be installed along Node.js as well.
@@ -37,7 +36,7 @@ We do not tolerate the use of language that has the intent to harass people in t
 * Public or private harassment
 * Other conduct which could reasonably be considered inappropriate in a professional setting
 
-# Licence
+# License
 This application is licensed under the MIT License.
 
 Copyright 2019 ©Basket2Basket
