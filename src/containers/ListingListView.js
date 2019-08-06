@@ -20,8 +20,8 @@ class ListingList extends React.Component {
 
         if (query) {
             if (query.category) {
-                axios.get('http://127.0.0.1:8000/api/listings/catList/?category=' + query.category)
-                // axios.get('https://basket2basket.herokuapp.com/api/listings/catList/?category=' + query.category)
+                // axios.get('http://127.0.0.1:8000/api/listings/catList/?category=' + query.category)
+                axios.get('https://basket2basket.herokuapp.com/api/listings/catList/?category=' + query.category)
                     .then(res => {
                         console.log(res);
                         this.setState({
