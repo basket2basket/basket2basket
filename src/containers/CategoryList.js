@@ -1,10 +1,5 @@
 import React from 'react';
 import axios from 'axios'
-import CategoryCard from '../components/CategoryCard';
-import {List} from "antd";
-import * as actions from "../store/actions/category";
-import {connect} from "react-redux";
-import categoryReducer from "../store/reducers/category";
 
 class CategoryList extends React.Component {
 
