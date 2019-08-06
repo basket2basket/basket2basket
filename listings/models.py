@@ -8,6 +8,12 @@ from django.contrib.auth.models import User
 
 
 
+class ListingQuerySet(models.QuerySet):
+    def get_by_category(self, category):
+        return self.filter(category=category)
+
+
+
 
 
 class Listing(models.Model):
@@ -22,10 +28,13 @@ class Listing(models.Model):
         ('Cat Products', 'Cat Products'),
         ('Apparel', 'Apparel'),
         ('Miscellaneous', 'Miscellaneous'),
+
     )
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=1)
 
     category = models.CharField(max_length=100, choices=categoryChoices, default='Miscellaneous')
+
+
 
     def __str__(self):
         return self.title

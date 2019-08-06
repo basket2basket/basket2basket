@@ -33,6 +33,14 @@ class ListingViewSet(viewsets.GenericViewSet, ListModelMixin):
         serializer = ListingSerializer(Listing.objects.all(), many=True,context=serializer_context)
         return Response(serializer.data)
 
+    @action(detail=False, methods=['get'])
+    def catList(self, request, *args, **kwargs):
+        category = request.query_params.get('category')
+        queryset = Listing.objects.filter(category=category.title())
+        serializer_context = self.get_serializer_context()
+        serializer = ListingSerializer(queryset, many=True, context=serializer_context)
+        return Response(serializer.data)
+
     def create(self, request):
         data = ListingSerializer(data=request.data)
         if data.is_valid():

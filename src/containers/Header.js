@@ -13,7 +13,9 @@ class Header extends Component {
                             <div className="navbar-item">
                                 <small><a href={`/`}>Basket2basket</a></small>
                             </div>
+
                         </div>
+
                         <div className="navbar-end">
                             <a className="navbar-item" href="/">
                                 Listings
@@ -21,9 +23,11 @@ class Header extends Component {
                             <a className="navbar-item" href="/create">
                                 Create
                             </a>
+                            <HeaderController className="navbar-item" {...this.props} />
                         </div>
 
-                    <HeaderController {...this.props} />
+
+
                     </div>
                 </nav>
             </header>

@@ -5,11 +5,11 @@ class HeaderController extends Component {
     render() {
         return (
             <div className="navbar-end">
-                <div className="navbar-item has-dropdown is-hoverable">
+                <div className="navbar-item has-dropdown  is-hoverable">
                     <div className="navbar-link">
-                        Nate Hishon
+
                     </div>
-                    <div className="navbar-dropdown">
+                    <div className="navbar-dropdown is-right">
 
                         {
                             this.props.isAuthenticated ?

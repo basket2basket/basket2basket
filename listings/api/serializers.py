@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = ('id' , 'title', 'description', 'price', 'status', 'address')
+        fields = ('id', 'title', 'description', 'price', 'status', 'address', 'category')
 
 
 class TransactionSerializer(serializers.ModelSerializer):
