@@ -24,8 +24,8 @@ class CustomForm extends React.Component {
 
         switch (requestType) {
             case 'post':
-                // axios.post('https://basket2basket.herokuapp.com/listings/create/', {
                  axios.post('http://127.0.0.1:8000/api/listings/', {
+                 // axios.post('https://basket2basket.herokuapp.com/api/listings/', {
                     title: title,
                     description: description,
                     price: price,
@@ -41,21 +41,6 @@ class CustomForm extends React.Component {
                         console.log(err)
                     });
 
-            // case 'put':
-            //     axios.put(`http://127.0.0.1:8000/listings/create/${listingID}/`, {
-            //         title: title,
-            //         description: description,
-            //         price: price,
-            //         category: category,
-            //         status: status,
-            //         address: address
-            //     })
-            //         .then(res => {
-            //             console.log(res)
-            //         })
-            //         .catch(err => {
-            //             console.log(err)
-            //         });
         }
     }
 
@@ -87,9 +72,10 @@ class CustomForm extends React.Component {
                             <div className="control">
                                 <div className="select is-primary">
                                     <select name="category" id="category">
-                                        <option value="fruits">Fruits</option>
-                                        <option value="vegetables">Vegetables</option>
-                                        <option value="dairy">Dairy</option>
+                                        <option value="Produce">Produce</option>
+                                        <option value="Cat Products">Cat Products</option>
+                                        <option value="Apparel">Apparel</option>
+                                        <option value="Miscellaneous">Miscellaneous</option>
                                     </select>
                                 </div>
                             </div>
@@ -126,7 +112,7 @@ class CustomForm extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    token: state.token
+    token: state.authReducer.token
   };
 };
 

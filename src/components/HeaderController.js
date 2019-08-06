@@ -16,9 +16,6 @@ class HeaderController extends Component {
 
                                 <Link onClick={this.props.logout} className="navbar-item">
                                     <div>
-                                         <span className="icon is-small">
-                                    <i className="fa fa-bug"></i>
-                                 </span>
                                         Logout
                                     </div>
                                 </Link>
@@ -27,24 +24,11 @@ class HeaderController extends Component {
 
                                 <Link to="/login" className="navbar-item">
                                     <div>
-                                         <span className="icon is-small">
-                                    <i className="fa fa-bug"></i>
-                                 </span>
                                         Login
                                     </div>
                                 </Link>
 
                         }
-
-                        <a className="navbar-item">
-                            <div>
-                                 <span className="icon is-small">
-                                    <i className="fa fa-bug"></i>
-                                 </span>
-                                Report bug
-                            </div>
-                        </a>
-
 
                     </div>
                 </div>

@@ -3,19 +3,16 @@ import React from 'react';
 
 class CategoryCard extends React.Component {
 
-    state = {
-    };
-
 
     render() {
+
         return (
-            <div>
-                <Card title={this.props.name}>
-                    <p>{this.state.listing.content}</p>
-                </Card>
+            <div className="column">
+                <i className={`fa icon-size ${ this.props.icon }`}> </i>
+                <p>{this.props.name}</p>
             </div>
         )
     }
 }
 
-export default ListingDetail;
+export default CategoryCard;
