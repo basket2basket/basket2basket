@@ -39,8 +39,7 @@ class CategoryList extends React.Component {
                     let handleClick = () => {
                         this.onClickFunct(category.name);
                     };
-                    return <CategoryCard name={<a href={`/listings/?category=`+category.name}  onClick={handleClick}>{category.name}  </a>}
-                                         category={category.name} icon={category.icon} key={category.id}/>
+                    return <CategoryCard name={category.name} category={category.name} icon={category.icon} key={category.id}/>
                 })}
                 </div>
             </div>

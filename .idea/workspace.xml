@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b46c35-494d-4ae5-a1bf-10264bd19035" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/actions/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/ListingView.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/ListingView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/listings/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoryCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoryCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CategoryList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/CategoryList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+            <state relative-caret-position="204">
+              <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -60,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/CategoryCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="43" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="43" />
+            <state relative-caret-position="180">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -70,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -146,8 +129,8 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/store/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/components/HeaderController.js" />
-        <option value="$PROJECT_DIR$/src/components/CategoryCard.js" />
         <option value="$PROJECT_DIR$/src/containers/CategoryList.js" />
+        <option value="$PROJECT_DIR$/src/components/CategoryCard.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
       </list>
     </option>
@@ -302,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21166000" />
+    <option name="totallyTimeSpent" value="21431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="43" width="1260" height="737" extended-state="0" />
@@ -654,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/CategoryList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+        <state relative-caret-position="204">
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -664,15 +647,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CategoryCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>

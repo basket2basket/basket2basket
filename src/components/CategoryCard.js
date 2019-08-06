@@ -8,8 +8,10 @@ class CategoryCard extends React.Component {
 
         return (
             <div className="column">
-                <i className={`fa icon-size ${ this.props.icon }`}> </i>
-                <p>{this.props.name}</p>
+
+                <a href={`/listings/?category=`+this.props.name}><i className={`fa icon-size ${ this.props.icon }`}> </i>
+                    {this.props.name}</a>
+
             </div>
         )
     }
