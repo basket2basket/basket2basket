@@ -24,8 +24,8 @@ class CustomForm extends React.Component {
 
         switch (requestType) {
             case 'post':
-                 axios.post('http://127.0.0.1:8000/api/listings/', {
-                 // axios.post('https://basket2basket.herokuapp.com/api/listings/', {
+                 // axios.post('http://127.0.0.1:8000/api/listings/', {
+                 axios.post('https://basket2basket.herokuapp.com/api/listings/', {
                     title: title,
                     description: description,
                     price: price,

@@ -29,8 +29,8 @@ class ListingList extends React.Component {
                         })
                     })
             } else {
-                axios.get('http://127.0.0.1:8000/api/listings/')
-                // axios.get('https://basket2basket.herokuapp.com/api/listings/')
+                // axios.get('http://127.0.0.1:8000/api/listings/')
+                axios.get('https://basket2basket.herokuapp.com/api/listings/')
                     .then(res => {
                         console.log(this.props.category);
                         this.setState({
